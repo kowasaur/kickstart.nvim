@@ -643,6 +643,9 @@ require('lazy').setup({
         },
 
         tailwindcss = {},
+        clangd = {
+          cmd = { 'clangd', '--offset-encoding=utf-16' },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -721,6 +724,7 @@ require('lazy').setup({
         json = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         typescriptreact = { 'prettierd' },
+        c = { 'clang-format' },
       },
       formatters = {
         yapf = {
