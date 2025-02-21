@@ -625,7 +625,7 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {},
-        --
+        hls = {}, -- It seems you need ghc installed through ghcup
 
         lua_ls = {
           -- cmd = {...},
@@ -667,6 +667,8 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = {},
+        automatic_installation = false,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
