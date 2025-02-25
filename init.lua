@@ -680,6 +680,7 @@ require('lazy').setup({
           end,
         },
       }
+      require('lspconfig').dafny.setup {}
     end,
   },
 
