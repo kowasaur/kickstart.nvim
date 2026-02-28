@@ -612,7 +612,6 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        -- clangd = {},
         -- gopls = {},
         pyright = {},
         -- rust_analyzer = {},
@@ -622,7 +621,7 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
-        hls = {}, -- It seems you need ghc installed through ghcup
+        -- hls = {}, -- It seems you need ghc installed through ghcup
 
         stylua = {}, -- Used to format Lua code
 
@@ -656,9 +655,9 @@ require('lazy').setup({
         },
 
         tailwindcss = {},
-        clangd = {
-          cmd = { 'clangd', '--offset-encoding=utf-16' },
-        },
+        -- clangd = {
+        --   cmd = { 'clangd', '--offset-encoding=utf-16' },
+        -- },
       }
 
       -- Ensure the servers and tools above are installed
